@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "Inter";
+  src: url(./../assets/fonts/Inter_Lato_Montserrat/Inter/static/Inter_18pt-Regular.ttf);
+}
+@font-face {
+  font-family: "Lato";
+  src: url(./../assets/fonts/Inter_Lato_Montserrat/Lato/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(./../assets/fonts/Inter_Lato_Montserrat/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+$title-font: "Lato", "sans-serif";
+$text-font: "Montserrat", "sans-serif";
+$shark: #202432;
+$skyblue: #75a0c5;
+$darkblue: #4166c4;
+$pink: #c36d6a;
+$green: #71ad5e;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $text-font;
+}
+li {
+  list-style-type: none;
+}
+h1 {
+  font-family: $title-font;
+}
+p {
+  font-family: $text-font;
+}
+body {
+  background-color: $shark;
+  color: white;
+}

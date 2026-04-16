@@ -1,0 +1,58 @@
+// Style for swiper Pop movies
+.swiperPop {
+  background-color: whitesmoke;
+
+  .swiperSlide {
+    max-width: 300px;
+    min-height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //   border: 2px salmon solid;
+    margin: 20px 0;
+    @media screen and (max-width: 900px) {
+      width: 300px;
+      height: 300px;
+    }
+    @media screen and (max-width: 580px) {
+      width: 250px;
+      height: 250px;
+    }
+
+    .imgPop {
+      width: 100%;
+      margin: auto;
+      max-height: auto;
+      background: center/cover;
+      background-repeat: no-repeat;
+      @media screen and (max-width: 900px) {
+        height: 300px;
+      }
+      @media screen and (max-width: 580px) {
+        height: 250px;
+      }
+
+      // border: 1px solid orange;
+    }
+    img {
+      width: 300px;
+      max-height: auto;
+      object-fit: contain;
+      align-self: center;
+      justify-self: center;
+      margin: auto;
+      @media screen and (max-width: 900px) {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+      @media screen and (max-width: 580px) {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+      }
+
+      // border: 1px solid fuchsia;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.aboutContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 350px;
+  padding: 0px 70px;
+  gap: 1rem;
+  margin-top: 10px;
+  @media screen and (max-width: 900px) {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  @media (width < 550px) {
+    padding: 0 10px;
+  }
+  figure {
+    background: url(./../../assets/img/banner/imgAbout.png) center/cover;
+    @media screen and (max-width: 900px) {
+      width: 100%;
+      height: 300px;
+    }
+  }
+  .imgChoices {
+    background: url(./../../assets/img/banner/bdimg.jpg) center/cover;
+  }
+  .textAbout {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 70px 0;
+    letter-spacing: 2px;
+    @media (width < 550px) {
+      padding: 0 10px;
+    }
+    h2 {
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+      @media (width < 550px) {
+        font-size: 1.2rem;
+      }
+    }
+    p {
+      line-height: 30px;
+    }
+    strong {
+      color: $darkblue;
+    }
+  }
+}

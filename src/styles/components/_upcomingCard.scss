@@ -1,0 +1,23 @@
+.upcomingCard {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  img {
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+  }
+  h4 {
+    background-color: $skyblue;
+    flex-grow: 1;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+}

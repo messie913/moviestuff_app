@@ -1,0 +1,125 @@
+.mainHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  position: relative;
+  @media (width < 650px) {
+    padding: 0 5px;
+  }
+  .mobileMenu {
+    color: whitesmoke;
+    font-size: 1.5rem;
+    display: none;
+    @media (width < 700px) {
+      display: block;
+    }
+  }
+  .logo {
+    a {
+      img {
+        width: auto;
+        height: 70px;
+        @media (width < 750px) {
+          width: 200px;
+          height: 50px;
+        }
+      }
+    }
+  }
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    @media (width < 700px) {
+      position: absolute;
+      top: 100%;
+      // left: -100%;
+      flex-direction: column;
+      gap: 5px;
+      background-color: $skyblue;
+      width: 100%;
+      transition: 0.3s ease-in-out;
+      z-index: 1;
+    }
+    .fav {
+      position: relative;
+      .badge {
+        background-color: rgb(240, 111, 111);
+        padding: 5px;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 0;
+        // left: 100%;
+        transform: translate(-50%, -50%);
+        font-size: 0.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media (width < 700px) {
+          left: 22%;
+        }
+      }
+    }
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+      transition: 0.25s ease-in-out;
+      padding: 5px;
+      position: relative;
+      &:hover {
+        // border-top: 2px inset wheat;
+        // outline-offset: 25px;
+        // border-radius: 10px;
+        // font-size: 1.2rem;
+        position: relative;
+        transition: 0.3s;
+        color: $skyblue;
+        @media (width<700px) {
+          color: whitesmoke;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          top: 40px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: $skyblue;
+          transition: 0.3s ease-in-out;
+        }
+      }
+    }
+    .nav-active {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 32px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: white;
+        transition: 0.3s ease-in-out;
+        @media (width < 700px) {
+          display: none;
+        }
+      }
+    }
+    li {
+      i {
+        color: rgb(240, 111, 111);
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
