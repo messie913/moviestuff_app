@@ -2,7 +2,9 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import MovieCard from "./MovieCard";
 
-const Getmovies = ({ searchValue }) => {
+const Getmovies = ({ searchValue, sortBtn }) => {
+  console.log(sortBtn);
+
   const [moviesData, setMoviesData] = useState([]);
   const [moviesGenre, setMoviesGenre] = useState([]);
   const firstLetterCapital = (string) => {
@@ -36,7 +38,13 @@ const Getmovies = ({ searchValue }) => {
       <div className="moviesDataContainer">
         {moviesData
           //   .filter((movie) => movie.title.includes(searchValue))
-          .sort((a, b) => b.vote_average - a.vote_average)
+          .sort((a, b) => {
+            if (sortBtn === "top") {
+              return b.vote_average - a.vote_average;
+            } else {
+              return a.vote_average - b.vote_average;
+            }
+          })
           .map((movie) => (
             <MovieCard movie={movie} key={movie.id} genres={moviesGenre} />
           ))}

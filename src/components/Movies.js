@@ -5,6 +5,7 @@ import Footer from "./Footer";
 
 const Movies = () => {
   const [searchValue, setSearchValue] = useState("");
+  const [sortBtn, setSortBtn] = useState("top");
   return (
     <div>
       <Header />
@@ -21,12 +22,24 @@ const Movies = () => {
             <input type="submit" value="Rechercher" />
           </form>
           <div className="sortBtn">
-            <button className="top">Top &#10514;</button>
-            <button className="flop">Flop &#10515;</button>
+            <button
+              className="top"
+              id="top"
+              onClick={(e) => setSortBtn(e.target.id)}
+            >
+              Top &#10514;
+            </button>
+            <button
+              className="flop"
+              id="flop"
+              onClick={(e) => setSortBtn(e.target.id)}
+            >
+              Flop &#10515;
+            </button>
           </div>
         </div>
       </div>
-      <Getmovies searchValue={searchValue} />
+      <Getmovies searchValue={searchValue} sortBtn={sortBtn} />
       <Footer />
     </div>
   );
