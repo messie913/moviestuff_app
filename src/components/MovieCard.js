@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 export const dateFormater = (date) => {
   let [yy, mm, dd] = date.split("-");
   return [dd, mm, yy].join("/");
@@ -9,6 +9,8 @@ const MovieCard = ({ movie, genres }) => {
   const [newItems, setNewItems] = useState([]);
 
   const addFav = (id) => {
+    console.log(newItems);
+
     setNewItems((prev) => {
       const storedFavs = JSON.parse(localStorage.getItem("favorites")) || [];
 

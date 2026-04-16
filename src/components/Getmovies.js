@@ -3,8 +3,6 @@ import React, { useEffect, useState } from "react";
 import MovieCard from "./MovieCard";
 
 const Getmovies = ({ searchValue, sortBtn }) => {
-  console.log(sortBtn);
-
   const [moviesData, setMoviesData] = useState([]);
   const [moviesGenre, setMoviesGenre] = useState([]);
   const firstLetterCapital = (string) => {
@@ -30,6 +28,16 @@ const Getmovies = ({ searchValue, sortBtn }) => {
       .then((res) => setMoviesGenre(res.data.genres));
   };
   useEffect(() => getMoviesData(), [searchValue]);
+  // useEffect(() => {
+  //   axios
+  //     .get(
+  //       searchValue
+  //         ? `https://api.themoviedb.org/3/search/movie?api_key=160728a9067dcfbc4ccebf7b2cc782cf&query=${firstLetterCapital(searchValue)}&language=fr-FR`
+  //         : `https://api.themoviedb.org/3/movie/popular?api_key=160728a9067dcfbc4ccebf7b2cc782cf&language=fr-FR`,
+  //     )
+  //     .then((res) => setMoviesData(res.data.results))
+  //     .catch((err) => console.log(err));
+  // }, [searchValue]);
   useEffect(() => {
     getGenres();
   }, []);

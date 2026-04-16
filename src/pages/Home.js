@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import Header from "../components/Header";
 import axios from "axios";
 import Popularswiper from "../components/Popularswiper";
-import Banner from "../components/Banner";
 import { NavLink } from "react-router-dom";
 import About from "../components/About";
 import NewMoviesMarquee from "../components/NewMoviesMarquee";
